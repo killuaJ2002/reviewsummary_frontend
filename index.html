@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Review Summarizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>QuickPulse Reviews</h1>
+      <div class="input-group">
+        <input
+          type="text"
+          id="urlInput"
+          placeholder="Paste Google Maps URL..."
+        />
+        <button onclick="getSummary()">Summarize</button>
+      </div>
+      <div id="result" class="result-box"></div>
+      <div id="loading" class="loading">Loading...</div>
+      <div id="error" class="error"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
