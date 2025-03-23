@@ -10,11 +10,14 @@ async function getSummary() {
   loadingDiv.style.display = "block";
 
   try {
-    const response = await fetch("http://localhost:3000/get-summary", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ url: urlInput.value }),
-    });
+    const response = await fetch(
+      "https://reviewsummary-backend.onrender.com/get-summary",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url: urlInput.value }),
+      }
+    );
 
     if (!response.ok) {
       throw new Error(await response.text());
